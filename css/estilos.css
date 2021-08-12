@@ -1,0 +1,364 @@
+@charset "UTF-8";
+.titulossecciones {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 40px;
+  background-image: radial-gradient(red, #610707);
+  padding: 25px;
+  margin: 0px; }
+
+.border {
+  border: 1px solid black; }
+
+header {
+  grid-area: header; }
+
+nav {
+  grid-area: nav; }
+
+section {
+  grid-area: section;
+  background-color: #999190; }
+
+aside {
+  grid-area: aside;
+  background-color: #999190; }
+
+footer {
+  grid-area: footer;
+  background-color: #a00707;
+  height: 300px; }
+
+@media (min-width: 768px) {
+  footer {
+    grid-area: footer;
+    background-color: #a00707;
+    height: 110px; } }
+
+#turbo:hover {
+  width: 60px;
+  height: 60px;
+  transform: rotateX(180deg) translate(500px, -20px);
+  transition: 2s; }
+
+.barra {
+  background-color: #610707;
+  margin: 0px;
+  padding: 0px;
+  font-size: 15px; }
+
+.tamañoInicio {
+  font-size: 18px; }
+
+.colorNavbar {
+  text-decoration: none;
+  color: white;
+  margin: 5px 30px; }
+
+@media (min-width: 768px) {
+  .alignNavbar {
+    align-items: center; } }
+
+.colorNavbar:hover {
+  text-decoration: none;
+  color: black; }
+
+#btMensajes {
+  margin: 5px 20px 5px 10px; }
+
+#navContacto {
+  text-decoration: none;
+  color: black; }
+
+.navegador {
+  background-color: #610707; }
+
+.navegador a {
+  text-decoration: none;
+  color: white; }
+
+.navegador a:hover {
+  text-decoration: none;
+  color: black; }
+
+.BCnavbar {
+  background-color: white;
+  margin: 5px 0px; }
+
+.titulosIndex {
+  text-align: center;
+  margin: 15px 0px; }
+
+.secYaside {
+  margin: 30px 0px; }
+
+.letrasAzules {
+  color: blue;
+  font-style: italic;
+  margin: 25px 25px 0px 25px; }
+
+.imagenes {
+  width: 250px;
+  height: 200px; }
+
+.toyota {
+  margin: 5px 15px;
+  width: 250px;
+  height: 200px; }
+
+@media (min-width: 768px) {
+  .toyota {
+    margin: 5px 50px;
+    width: 250px;
+    height: 200px; } }
+
+.subaru {
+  margin: 5px 15px;
+  width: 250px;
+  height: 200px; }
+
+@media (min-width: 768px) {
+  .subaru {
+    margin: 5px 50px;
+    width: 250px;
+    height: 200px; } }
+
+.toyota:hover {
+  margin: 0px 50px;
+  width: 300px;
+  height: 250px;
+  transition: 2s; }
+
+.subaru:hover {
+  margin: 0px 50px;
+  width: 300px;
+  height: 250px;
+  transition: 2s; }
+
+body {
+  background-color: #999190; }
+
+p {
+  font-family: 'Roboto Condensed', sans-serif; }
+
+div {
+  font-family: 'Roboto Condensed', sans-serif; }
+
+table {
+  border: solid;
+  border-color: black;
+  background-color: white;
+  color: black;
+  width: 700px;
+  height: 150px;
+  text-align: center;
+  transform: translate(350px, 0px); }
+
+/*--------------CONTACTO-------------*/
+.contacto {
+  display: flex;
+  justify-content: center; }
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 300px;
+  height: 650px;
+  background-color: #5f5f5f;
+  padding: 0px 10px;
+  margin: 15px 0px; }
+
+.negritaContacto {
+  font-weight: bold; }
+
+#BIcontacto {
+  background-image: url(https://www.autofacil.es/wp-content/uploads/2021/05/my20-gt-r-nismo-germany24-sourceok.jpg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: 100%; }
+
+.logo__redes {
+  height: 35px;
+  width: 35px;
+  margin: 0px 10px; }
+
+.redes {
+  margin: 0px;
+  padding: 0px; }
+
+@media (min-width: 768px) {
+  .redes {
+    margin: 80px 0px 0px 70px;
+    padding: 0px; } }
+
+.copyright {
+  color: blue;
+  padding-top: 7px;
+  transform: translate(55px, 0px); }
+
+.footercontacto {
+  padding: 20px 0px 0px 0px; }
+
+@media (min-width: 768px) {
+  .footercontacto {
+    padding: 110px 20px 0px 0px; } }
+
+.policy {
+  padding: 5px 0px 0px 0px; }
+
+@media (min-width: 768px) {
+  .policy {
+    padding: 110px 0px 0px 20px; } }
+
+.h6 {
+  font-weight: bold; }
+
+/*--------------NUEVOS-------------*/
+.nuevos {
+  display: flex;
+  flex-direction: column;
+  height: 650px; }
+
+.tituloCard {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold; }
+
+.colNuevos {
+  display: flex;
+  justify-content: center;
+  background-color: #5f5f5f;
+  margin: 10px 0px; }
+
+@media (min-width: 768px) {
+  .colNuevos {
+    display: flex;
+    justify-content: center;
+    background-color: #5f5f5f;
+    margin: 50px; } }
+
+.imagenesNuevos {
+  height: 200px;
+  width: 100%; }
+
+/*--------------PRODUCTOS-------------*/
+.productos {
+  margin: 15px 25px 10px 25px; }
+
+/*--------------VIDEO-------------*/
+.video {
+  width: 100%;
+  height: 300px; }
+
+@media (min-width: 768px) {
+  .video {
+    width: 500px;
+    height: 300px;
+    transform: translate(75px, 10px); } }
+
+.carouselVideo {
+  width: 100px;
+  height: 450px;
+  margin: 20px 0px; }
+
+.sectionVideo {
+  margin: 10px 0px; }
+
+.tituloVideo {
+  text-align: center; }
+
+/*--------------MEDIATABLET-------------*/
+#grilla {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "nav" "section" "aside" "footer";
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  background-color: #999190;
+  width: 100%; }
+
+@media (min-width: 768px) {
+  #grilla {
+    display: grid;
+    grid-template-rows: 122px 40px 500px 100px;
+    grid-template-columns: 2fr 0.01fr;
+    grid-template-areas: "header header" "nav nav" "section aside" "footer footer";
+    background-color: #999190; } }
+
+.flex-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+@media (min-width: 768px) {
+  .flex-div {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 25px; } }
+
+.titulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 20px;
+  background-image: radial-gradient(red, #610707); }
+
+@media (min-width: 768px) {
+  .titulo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+    background-image: radial-gradient(red, #610707);
+    height: 100px; } }
+
+.navegador ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0px; }
+
+@media (min-width: 768px) {
+  .navegador ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    padding: 10px; } }
+
+#turbo {
+  width: 60px;
+  height: 60px; }
+
+@media (min-width: 768px) {
+  #turbo {
+    width: 60px;
+    height: 60px;
+    transform: translate(500px, 0px); } }
+
+.redesYcontacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 0px;
+  align-items: center; }
+
+@media (min-width: 768px) {
+  .redesYcontacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 0px; } }
+
+.navegador {
+  font-size: 15px; }
