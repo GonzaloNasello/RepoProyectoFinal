@@ -1,3 +1,6 @@
+$color1:rgb(97, 7, 7);
+$color2:rgb(153, 145, 144);
+$color3:black;
 .titulossecciones{
     display: flex;
     flex-direction: column;
@@ -5,13 +8,13 @@
     align-items: center;
     font-family: 'Bebas Neue', cursive;
     font-size: 40px;
-    background-image: radial-gradient(red, rgb(97, 7, 7));
+    background-image: radial-gradient(red, $color1);
     padding: 25px;
     margin: 0px;
 }
 
 .border {
-    border: 1px solid black;
+    border: 1px solid $color3;
  }
  header {
     grid-area: header;
@@ -21,11 +24,11 @@
  }
  section {
     grid-area: section;  
-    background-color: rgb(153, 145, 144); 
+    background-color: $color2; 
  }
  aside {
     grid-area: aside;
-    background-color: rgb(153, 145, 144);
+    background-color: $color2;
  }
  footer {
     grid-area: footer;
@@ -39,7 +42,7 @@
         height: 110px;
      }
  }
- #turbo:hover{
+ .header__turbo--hover:hover{
     width: 60px; 
     height: 60px; 
     transform: rotateX(180deg) translate(500px,-20px);
@@ -67,31 +70,35 @@
 }
 .colorNavbar:hover{
     text-decoration: none;
-    color: black;
+    color: $color3;
 }
 #btMensajes{
     margin: 5px 20px 5px 10px;
 }
 #navContacto{
     text-decoration: none;
-    color: black;
+    color: $color3;
 }
 .navegador{
     background-color:rgb(97, 7, 7);
 }
-.navegador a{
+.navegador {
+    a {
     text-decoration: none;
     color: white;
+    }
 }
-.navegador a:hover{
+.navegador {
+    a:hover {
     text-decoration: none;
-    color: black;
+    color: $color3;
+    }
 }
 .BCnavbar{
     background-color: white;
     margin: 5px 0px;
 }
-.titulosIndex{
+.h2__titulosindex{
     text-align: center;
     margin: 15px 0px;
 }
@@ -112,39 +119,31 @@
     width: 250px;
     height:200px; 
 }
-@media (min-width: 768px){
-    .toyota{
-        margin: 5px 50px;
-        width: 250px;
-        height:200px; 
-    }
-}
 .subaru{
     margin: 5px 15px;
     width: 250px;
     height:200px;
 }
 @media (min-width: 768px){
-    .subaru{
-        margin: 5px 50px;
-        width: 250px;
-        height:200px;
+    @each $imagen in toyota, subaru {
+        .#{$imagen}__imagenesIndex { 
+            margin: 5px 50px;
+            width: 250px;
+            height:200px;
+        }
+    } 
+}
+@each $imagen in toyota__imagenesIndex, subaru__imagenesIndex {
+    .#{$imagen}--hover:hover { 
+        margin: 0px 50px;
+        width: 300px;
+        height: 250px;
+        transition: 2s;
     }
-}
-.toyota:hover{
-    margin: 0px 50px;
-    width: 300px;
-    height: 250px;
-    transition: 2s;
-}
-.subaru:hover{
-    margin: 0px 50px;
-    width: 300px;
-    height: 250px;
-    transition: 2s;
-}
+} 
+
 body { 
-    background-color: rgb(153, 145, 144); 
+    background-color: $color2; 
 }
 
 p{ 
@@ -179,28 +178,49 @@ table{
     background-color: rgb(95, 95, 95);
     padding: 0px 10px;
     margin: 15px 0px;
+    border: 2px solid $color1;
 }
 .negritaContacto{
     font-weight: bold;
 }
+.formulario{
+    input{
+        border: 1px solid $color3;
+    }
+    select{
+        border: 1px solid $color3;
+    } 
+    textarea{
+        border: 1px solid $color3;
+    }
+}
 #BIcontacto{
     background-image: url(https://www.autofacil.es/wp-content/uploads/2021/05/my20-gt-r-nismo-germany24-sourceok.jpg);
-    background-repeat:no-repeat;
+    background-repeat:repeat;
     background-position-x:center;
     background-position-y:center;
     background-size: 100%;
+}
+@media (min-width: 768px){
+    #BIcontacto{
+        background-image: url(https://www.autofacil.es/wp-content/uploads/2021/05/my20-gt-r-nismo-germany24-sourceok.jpg);
+        background-repeat:no-repeat;
+        background-position-x:center;
+        background-position-y:center;
+        background-size: 100%;
+    }
 }
 .logo__redes{
     height: 35px;
     width: 35px;
     margin: 0px 10px;
 }
-.redes{
+.footer__redesYcontacto--redes{
     margin: 0px;
     padding: 0px;
 }
 @media (min-width: 768px){
-    .redes{
+    .footer__redesYcontacto--redes{
         
         margin: 80px 0px 0px 70px;
         padding: 0px;
@@ -211,19 +231,19 @@ table{
     padding-top: 7px;
     transform: translate(55px, 0px);
 }
-.footercontacto{
+.footer__redesYcontacto--contacto{
     padding: 20px 0px 0px 0px;
 }
 @media (min-width: 768px) {
-    .footercontacto{
+    .footer__redesYcontacto--contacto{
         padding: 110px 20px 0px 0px;
     }
 }
-.policy{
+.footer__redesYcontacto--policy{
     padding: 5px 0px 0px 0px;
 }
 @media (min-width: 768px) {
-    .policy{
+    .footer__redesYcontacto--policy{
         padding: 110px 0px 0px 20px;
     }
 }
@@ -263,8 +283,42 @@ table{
 }
 
 /*--------------PRODUCTOS-------------*/
+.parrafo__productos{
+    margin: 15px 25px 20px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    
+}
 .productos{
-    margin: 15px 25px 10px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    padding: 5px 10px;
+    margin: 10px 25px;
+    background-color: white;
+}
+@media (min-width: 768px) {
+    .productos{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid black;
+        padding: 5px 10px;
+        margin: 10px 25px;
+        height: 90px;
+        background-color: white;
+    }
+}
+.productos:hover{
+    transform: skewX(-10deg);
+    background-color: $color1;
+    color: white;
+}
+.margin__btn{
+    margin-left: 10px;
 }
 /*--------------VIDEO-------------*/
 .video{
@@ -301,21 +355,21 @@ table{
           "footer";
         grid-column-gap: 0px;
         grid-row-gap: 0px;
-        background-color: rgb(153, 145, 144);
+        background-color: $color2;
         width: 100%;
      
 }
 @media (min-width: 768px) {
     #grilla {
         display: grid;
-        grid-template-rows: 122px 40px 500px 100px; 
+        grid-template-rows: 122px 40px 550px 100px; 
         grid-template-columns: 2fr 0.01fr ;
         grid-template-areas:
         "header header"
         "nav nav"
         "section aside"
         "footer footer";
-        background-color: rgb(153, 145, 144);
+        background-color: $color2;
     }
 }
 .flex-div{
@@ -332,7 +386,7 @@ table{
 }
 }
 
-.titulo{
+.header__titulo{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -342,7 +396,7 @@ table{
     background-image: radial-gradient(red, rgb(97, 7, 7));
 }
 @media (min-width: 768px){
-    .titulo{
+    .header__titulo{
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -353,37 +407,41 @@ table{
     }
 }
 
-.navegador ul{
+.navegador {
+    ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     list-style: none;
     margin: 0px;
+    }
 }
 
 @media (min-width: 768px){
-    .navegador ul{
+    .navegador {
+        ul {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         list-style: none;
         padding: 10px;
+        }
     }
  }
 
- #turbo{
+ .header__turbo--hover{
     width: 60px;
     height: 60px; 
 } 
 @media (min-width: 768px){
-   #turbo{
+   .header__turbo--hover{
        width: 60px; 
        height: 60px; 
        transform: translate(500px,0px);
    } 
 }
-.redesYcontacto{
+.footer__redesYcontacto{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -392,7 +450,7 @@ table{
 
 }
 @media (min-width: 768px){
-    .redesYcontacto{
+    .footer__redesYcontacto{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
